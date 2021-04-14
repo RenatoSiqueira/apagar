@@ -16,7 +16,9 @@ mongoose.Promise = global.Promise
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // assets
-app.use(express.static('public'))
+// app.use(express.static('public'))
+//TODO: Mude Para:
+app.use(express.static(path.join(__dirname, '/public')))
 
 // view engine - EJS
 app.set('views', path.join(__dirname, 'views'))
